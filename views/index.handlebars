@@ -6,7 +6,9 @@
     <h3>Burgers on your mind:</h3>
     <ul>
     {{#each burgers}}
-        <li>{{burger_name}}</li>
+     {{#unless devoured}}
+        <li>{{burger_name}} <button>Devour it!</button></li>
+     {{/unless}}
     {{/each}}
     </ul>
 </div>
@@ -22,8 +24,10 @@
 <div class="col-3">
     <h3>Burgers in your belly:</h3>
     <ul>
-        {{#each devoured}}
-        <li>{{burger_name}}</li>
+        {{#each burger}}
+         {{#if devoured}}
+             <li>{{burger_name}}</li>
+         {{/if}}
         {{/each}}
     </ul>
 </div>
