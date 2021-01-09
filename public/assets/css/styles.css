@@ -1,0 +1,42 @@
+.container {
+    width: 96%;
+}
+
+.image {
+    width: 110%;
+    margin-left: -5%;
+}
+
+#textarea-title {
+    color: white;
+    display: block;
+    position: relative;
+    top: -36%;
+    left: 5%;
+    z-index: 1;
+}
+
+#add-form {
+    display: block;
+    position: relative;
+    top: -34%;
+    left: 5%;
+    width: 52%;
+    z-index: 1;
+}
+
+textarea {
+    width: 80%;
+}
+
+
+#idea-list {
+    background-color: gray;
+    z-index: 1;
+
+}
+
+#eaten-list {
+    background-color: gray;
+}
+

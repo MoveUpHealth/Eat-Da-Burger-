@@ -45,6 +45,22 @@ app.get('/', (req, res) => {
     
 })
 
+app.post("/", function(req, res) {
+    // Test it.
+    console.log(req.body);
+  
+    // Test it.
+    // res.send('You sent, ' + req.body.wish)
+  
+    connection.query("INSERT INTO burgers (burger) VALUES (?)", [req.body.burger], function(err, result) {
+      if (err) {
+        throw err;
+      }
+  
+      res.redirect("/");
+    });
+  });
+
 
 
 // Start our server so that it can begin listening to client requests.
