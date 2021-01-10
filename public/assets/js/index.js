@@ -21,13 +21,13 @@ $(function() {
       );
     });
   
-    $(".add-btn").on("submit", function(event) {
+    $("#add-btn").on("click", function(event) {
       // Make sure to preventDefault on a submit event.
       event.preventDefault();
   
       var newBurger = {
         burger_name: $("#burger_name").val().trim(),
-        devoured: false
+        devoured: 0
       };
   
       // Send the POST request.
@@ -36,7 +36,7 @@ $(function() {
         data: newBurger
       }).then(
         function() {
-          console.log("created new burger");
+          console.log(newBurger);
           // Reload the page to get the updated list
           location.reload();
         }
