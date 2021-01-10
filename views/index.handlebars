@@ -9,7 +9,7 @@
             <ul>
             {{#each burgers}}
             {{#unless devoured}}
-                <li>{{burger_name}} <button id="eat-btn">Devour it!</button></li>
+                <li>{{burger_name}} <button class="eat-btn" data-id="{{id}}" data-devour="{{devoured}}">Devour it!</button></li>
             {{/unless}}
             {{/each}}
             </ul>
@@ -18,7 +18,7 @@
             <img class="image" src="/assets/images/burger.jpg">
             <h4 id="textarea-title">Enter your creation here:</h4>
             <form id="add-form">
-                    <textarea placeholder="Type in the burger name here">
+                    <textarea id="burger_name" placeholder="Type in the burger name here">
 
                     </textarea>
                     <button id="add-btn">Submit</button>
@@ -28,7 +28,7 @@
             <h3>Burgers in your belly:</h3>
             <hr>
             <ul>
-                {{#each burger}}
+                {{#each burgers}}
                 {{#if devoured}}
                     <li>{{burger_name}}</li>
                 {{/if}}
